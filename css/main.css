@@ -1,8 +1,12 @@
+body {
+  min-width: 320px;
+}
+
 .hero {
   background: url('../img/hero.jpg') no-repeat;
   min-height: 500px;
   background-size: cover;
-  position: relative;
+  text-align: center;
 }
 
 .hero:before {
@@ -20,8 +24,8 @@ h3.logo {
   font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   border: 1px solid white;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
+  margin: 60px auto 100px;
   padding: 15px 20px;
   width: 230px;
   text-transform: uppercase;
@@ -35,6 +39,7 @@ h2.tagline {
 h4.sub-tagline {
   font-family: 'PT Serif', serif;
   font-style: italic;
+  padding: 20px;
 }
 
 main {
@@ -44,6 +49,13 @@ main {
 article {
   width: 60%;
   margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+  article {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 article h1 {
@@ -88,6 +100,19 @@ article p a:hover {
   text-transform: uppercase;
   width: 25%;
   margin: 0;
+}
+
+@media (max-width: 320px) {
+  .share ul li {
+    width: 100%;
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #444;
+  }
+
+  .share ul li:last-child {
+    border-bottom: none;
+  }
 }
 
 .share ul li:first-child,
